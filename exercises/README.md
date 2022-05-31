@@ -1,6 +1,8 @@
 # Exercises
 
-**TODO: Add description**
+My exercises for the brilliant `Elixir in Action` book (2nd Edition).
+
+Testing in Elixir is awesome!
 
 ## Installation
 
