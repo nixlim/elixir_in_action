@@ -23,7 +23,6 @@ defmodule Exercises do
     do_calculate_list_length(length_of_list + 1, tail)
   end
 
-
   @doc """
   Produce list for a range
 
@@ -40,6 +39,31 @@ defmodule Exercises do
     case from <= to do
       true -> do_range(from + 1, to, [from | list])
       false -> Enum.reverse(list)
+    end
+  end
+
+  @doc """
+  Produce list for a range
+
+  ## Example
+
+      iex> Exercises.positive([1,2,3])
+      [1,2,3]
+      iex> Exercises.positive([-1,2,-5])
+      [2]
+  """
+  def positive(list) do
+    do_positive(list, [])
+  end
+
+  defp do_positive([], list) do
+    Enum.reverse(list)
+  end
+
+  defp do_positive([head | tail], returned_list) do
+    case head > 0 do
+      true -> do_positive(tail, [head | returned_list])
+      false -> do_positive(tail, returned_list)
     end
   end
 end

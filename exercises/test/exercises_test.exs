@@ -21,4 +21,11 @@ defmodule ExercisesTest do
     assert Exercises.range(1,0) == []
   end
 
+  test "return positive list" do
+    assert Exercises.positive([]) == []
+    assert Exercises.positive([-1,2,3,4]) == [2,3,4]
+    assert Exercises.positive([-1]) == []
+    assert Exercises.positive([4]) == [4]
+  end
+
 end
