@@ -51,6 +51,8 @@ defmodule Exercises do
       [1,2,3]
       iex> Exercises.positive([-1,2,-5])
       [2]
+      iex> Exercises.positive([0])
+      [0]
   """
   def positive(list) do
     do_positive(list, [])
